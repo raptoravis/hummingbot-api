@@ -1,0 +1,21 @@
+# hummingbot
+flake8
+isort
+pre-commit
+logfire
+logfire[fastapi]
+logfire[system-metrics]
+aiomqtt>=2.0.0
+sqlalchemy>=2.0.0
+asyncpg
+psycopg2-binary
+greenlet
+pydantic-settings
+logfire
+
+fastapi
+uvicorn
+python-dotenv
+
+boto3
+docker-py
