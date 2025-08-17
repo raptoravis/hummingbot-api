@@ -1,0 +1,19 @@
+.ONESHELL:
+.SHELLFLAGS := -c
+
+.PHONY: run
+.PHONY: install
+.PHONY: install-pre-commit
+
+run:
+	echo "Running API from source..."
+	docker compose up emqx postgres -d
+	uvicorn main:app --reload
+
+install:
+	pip install -r requirements-my.txt
+	$(MAKE) install-pre-commit
+
+install-pre-commit:
+	pip install pre-commit 
+	pre-commit install
